@@ -6,4 +6,4 @@ TRUNCATE TABLE recipes RESTART IDENTITY; -- replace with your own table name.
 -- Replace these statements with your own seed data.
 
 INSERT INTO recipes (name, average_cooking_time, rating) VALUES ('Lasagne', '60', '5');
-INSERT INTO recipes (name, average_cooking_time, rating) VALUES ('Apple crubmle', '45', '4');
+INSERT INTO recipes (name, average_cooking_time, rating) VALUES ('Apple Crumble', '45', '4');

@@ -175,13 +175,19 @@ recipes[1].rating # => '4'
 # 2
 # Get a single student
 
-repo = StudentRepository.new
+repo = RecipeRepository.new
 
-student = repo.find(1)
+recipe = repo.find(1)
 
-student.id # =>  1
-student.name # =>  'David'
-student.cohort_name # =>  'April 2022'
+recipe.id # =>  1
+recipe.name # =>  'Lasagne'
+recipe.average_cooking_time # =>  '60'
+recipe.rating # => '5'
+
+recipe.id # =>  2
+recipe.name # =>  'Apple Crumble'
+recipe.average_cooking_time # =>  '45'
+recipe.rating # => '4'
 
 # Add more examples for each method
 ```
@@ -197,17 +203,17 @@ This is so you get a fresh table contents every time you run the test suite.
 ```ruby
 # EXAMPLE
 
-# file: spec/student_repository_spec.rb
+# file: spec/recipe_repository_spec.rb
 
-def reset_students_table
-  seed_sql = File.read('spec/seeds_students.sql')
-  connection = PG.connect({ host: '127.0.0.1', dbname: 'students' })
+def reset_recipe_table
+  seed_sql = File.read('spec/seeds_recipe.sql')
+  connection = PG.connect({ host: '127.0.0.1', dbname: 'recipes_directory' })
   connection.exec(seed_sql)
 end
 
-describe StudentRepository do
+describe RecipeRepository do
   before(:each) do 
-    reset_students_table
+    reset_recipe_table
   end
 
   # (your tests will go here).

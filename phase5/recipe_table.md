@@ -31,7 +31,7 @@ Put the different nouns in this table. Replace the example with your own nouns.
 
 | Record                | Properties          |
 | --------------------- | ------------------  |
-| recipes              | name, average_cooking_time, rating
+| recipes               | name, average_cooking_time, rating
 
 Name of the table (always plural): `recipes` 
 
